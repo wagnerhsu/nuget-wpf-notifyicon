@@ -11,7 +11,12 @@
     Height="450"
     mc:Ignorable="d">
     <Grid>
-        <tb:TaskbarIcon x:Name="myNotifyIcon" IconSource="/Icons/Computers.ico">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <tb:TaskbarIcon Grid.Row="0" x:Name="myNotifyIcon" IconSource="/Icons/Computers.ico">
             <tb:TaskbarIcon.TrayToolTip>
                 <Border
                     Width="160"
@@ -28,6 +33,6 @@
                 </Border>
             </tb:TaskbarIcon.TrayToolTip>
         </tb:TaskbarIcon>
-
+        <TextBlock Grid.Row="1">Test</TextBlock>
     </Grid>
 </Window>
